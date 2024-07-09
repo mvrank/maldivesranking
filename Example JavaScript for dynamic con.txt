@@ -1,0 +1,59 @@
+// Example JavaScript for dynamic content loading and form submission handling
+
+// Function to fetch top TikTokers and display on homepage
+function fetchTopTikTokers() {
+    // Example API call or data fetching logic goes here
+    // Replace with actual data retrieval logic
+    const tikTokers = [
+        { name: 'TikToker 1', followers: 10000, videos: 50, rank: 1 },
+        { name: 'TikToker 2', followers: 8500, videos: 45, rank: 2 },
+        { name: 'TikToker 3', followers: 7200, videos: 60, rank: 3 }
+        // Add more TikTokers as needed
+    ];
+
+    const tikTokersList = document.querySelector('.tiktokers-list');
+
+    tikTokersList.innerHTML = '';
+
+    tikTokers.forEach(tikToker => {
+        const tiktokerCard = document.createElement('div');
+        tiktokerCard.classList.add('tiktoker-card');
+        tiktokerCard.innerHTML = `
+            <h3>${tikToker.name}</h3>
+            <p>Followers: ${tikToker.followers}</p>
+            <p>Videos: ${tikToker.videos}</p>
+            <p>Rank: ${tikToker.rank}</p>
+            <button>View Profile</button>
+        `;
+        tikTokersList.appendChild(tiktokerCard);
+    });
+}
+
+// Event listener for form submission (Login Form)
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Example: Fetch data from form and send to backend API for authentication
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Replace with actual API call or authentication logic
+    console.log(`Logging in with username: ${username}, password: ${password}`);
+});
+
+// Event listener for form submission (Register Form)
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Example: Fetch data from form and send to backend API for registration
+    const fullname = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
+    const mobile = document.getElementById('mobile').value;
+    const password_reg = document.getElementById('password_reg').value;
+
+    // Replace with actual API call or registration logic
+    console.log(`Registering with Full Name: ${fullname}, Email: ${email}, Mobile: ${mobile}, Password: ${password_reg}`);
+});
+
+// Fetch top TikTokers on page load
+document.addEventListener('DOMContentLoaded', function() {
+    fetchTopTikTokers();
+});

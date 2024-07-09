@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maldives TikTokers Ranking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Maldives TikTokers Ranking</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#login">Log In</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Top TikTokers in Maldives</h2>
+            <div class="tiktokers-list">
+                <!-- Display top TikTokers dynamically using JavaScript -->
+            </div>
+        </section>
+
+        <section id="login">
+            <h2>Log In</h2>
+            <form id="loginForm">
+                <label for="username">Username (email or mobile number):</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Log In</button>
+            </form>
+        </section>
+
+        <section id="register">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                <label for="password_reg">Password:</label>
+                <input type="password" id="password_reg" name="password_reg" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Maldives TikTokers Ranking</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
